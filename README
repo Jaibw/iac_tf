@@ -83,6 +83,14 @@ nano ansible-timeout-reboot.yaml # 1.) update your-machine-ip
 ansible-playbook ansible-timeout-reboot.yaml
 
 
+==========================================================================
+Install HTTPD with block  
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/install-httpd-block.yaml
+ansible-playbook install-httpd-block.yaml
+
+
+
 
 
 

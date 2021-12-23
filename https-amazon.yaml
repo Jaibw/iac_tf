@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Installing Apache packages
+      yum: name=httpd state=present
+      when: ansible_os_family == "RedHat" or ansible_distribution == "Amazon"
+
+    - name: Changing Listening port to 81
+      lineinfile:
+        path: /etc/httpd/conf/httpd.conf
+        regexp: "Listen 80"
+        line: Listen 81
+      when: ansible_os_family == "RedHat" or ansible_distribution == "Amazon"
+
+    - name: Index file 
+      copy: dest=/var/www/html/index.html content="<h1>This is a demo for Apache Webserver! {{ ansible_hostname }} - {{ ansible_eth0.ipv4.address }} </h1>"
+      when: ansible_os_family == "RedHat" or ansible_distribution == "Amazon"
+
+    - name: Starting Apache webservice
+      service: name=httpd enabled=yes state=started
+      when: ansible_os_family == "RedHat" or ansible_distribution == "Amazon"

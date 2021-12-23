@@ -61,6 +61,10 @@ Install NTP with Regsiters
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/ntp-registers.yaml
 ansible-playbook ntp-registers.yaml
 
-
-
+==========================================================================
+Create multiple users with loop 
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/users-many.yaml
+nano users-many.yaml # 1.) update my-machine-ip  2. add more users in the loop 
+ansible-playbook users-many.yaml
 

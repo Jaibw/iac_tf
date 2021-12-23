@@ -5,7 +5,7 @@
     - name: NTP OS Package Installation
       package: name=ntp state=present
       register: ntp_out
-      ignore_erros: true 
+      ignore_errors: true 
     - name: debug 
       debug: 
         var: ntp_output 

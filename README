@@ -90,7 +90,11 @@ wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/install-httpd-block.yam
 ansible-playbook install-httpd-block.yaml
 
 
-
+==========================================================================
+Run Playbooks in serial 
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/serial-demo.yaml
+ansible-playbook serial-demo.yaml
 
 
 

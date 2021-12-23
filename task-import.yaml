@@ -1,0 +1,7 @@
+---
+- name: Demo Playbook to import task
+  hosts: 172.31.13.40
+  become: true
+  tasks:
+    - name: Import from diff. playbook 
+      import_tasks: ./ansible-timeout-reboot.yaml

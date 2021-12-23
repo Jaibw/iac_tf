@@ -38,3 +38,19 @@ ansible-playbook httpdfinal.yaml
 
 curl http://<ip-address>:81/
 
+==========================================================================
+Debug 
+==========================================================================
+ansible-playbook httpdfinal.yaml -v
+ansible-playbook httpdfinal.yaml -vv
+ansible-playbook httpdfinal.yaml -vvv
+ansible-playbook httpdfinal.yaml -vvvv
+ansible-playbook httpdfinal.yaml -vvvvv
+ansible-playbook httpdfinal.yaml -v | wc -l
+ansible-playbook httpdfinal.yaml -vv | wc -l
+ansible-playbook httpdfinal.yaml -vvv | wc -l
+ansible-playbook httpdfinal.yaml -vvvv | wc -l
+ansible-playbook httpdfinal.yaml -vvvvv | wc -l
+
+
+

@@ -3,7 +3,7 @@
   become: true
   tasks:
     - name: Install and Configure - HTTPD
-      block:
+       block:
         - name: Installing Apache packages
           yum: name=httpd state=present
         - name: Changing Listening port to 81
@@ -15,6 +15,7 @@
           copy: dest=/var/www/html/index.html content="<h1>This is a demo for Apache Webserver! {{ ansible_hostname }} - {{ ansible_eth0.ipv4.address }} </h1>"
         - name: Starting Apache webservice
           service: name=httpd enabled=yes state=started
-      when: ansible_os_family == "RedHat" or ansible_distribution == "Amazon"
-      retries: 3
+       when: ansible_os_family == "RedHat" or ansible_distribution == "Amazon"
+       retries: 3
+
       

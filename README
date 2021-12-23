@@ -1,6 +1,6 @@
 Ansible repo
 
-<pre>
+ 
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/ntp.conf
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/ntp-ubuntu.yaml
 nano ntp-ubuntu.yaml  ## replace myip with your VM IP 
@@ -11,4 +11,4 @@ ansible-playbook ntp-ubuntu.yaml # re-run it again and see te output
 nano ntp.conf         ## add one more config line=> server 1.europe.pool.ntp.org  
 
 ansible-playbook ntp-ubuntu.yaml
-</pre>
+

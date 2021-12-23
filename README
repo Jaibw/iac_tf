@@ -55,4 +55,12 @@ ansible-playbook httpdfinal.yaml -vvvvv | wc -l
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/debug.yaml
 ansible-playbook debug.yaml
 
+==========================================================================
+Install NTP with Regsiters  
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/ntp-registers.yaml
+ansible-playbook ntp-registers.yaml
+
+
+
 

@@ -1,0 +1,9 @@
+---
+- name: Ignore Error Playbook
+  hosts: all
+  tasks:
+    - name: This will not be counted as failure
+      command: /bin/date12
+      ignore_errors: yes
+    - name: watch files 
+      command: ls 

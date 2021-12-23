@@ -75,3 +75,15 @@ wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/install-multiplate-pkgs
 nano install-multiplate-pkgs.yaml # 1.) update your-machine-ip   
 ansible-playbook install-multiplate-pkgs.yaml
 
+==========================================================================
+Timeout and other options  
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/ansible-timeout-reboot.yaml
+nano ansible-timeout-reboot.yaml # 1.) update your-machine-ip   
+ansible-playbook ansible-timeout-reboot.yaml
+
+
+
+
+
+

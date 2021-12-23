@@ -3,7 +3,7 @@
   hosts: all
   become: true
   tasks:
-    - name: Talk package installation
+    - name: Telnet package installation
       yum: name=telnet state=present
       register: output
 

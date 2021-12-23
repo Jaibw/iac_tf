@@ -1,5 +1,7 @@
 Ansible repo
-
+==========================================================================
+Handlers 
+==========================================================================
  
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/ntp.conf
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/ntp-ubuntu.yaml
@@ -11,4 +13,13 @@ ansible-playbook ntp-ubuntu.yaml # re-run it again and see te output
 nano ntp.conf         ## add one more config line=> server 1.europe.pool.ntp.org  
 
 ansible-playbook ntp-ubuntu.yaml
+
+==========================================================================
+Variables  
+==========================================================================
+
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/user.yaml
+sed 's/my-machine-ip/<ip-address>/g' user.yaml > userfinal.yaml
+ansible-playbook userfinal.yaml -e username=<any-username>
+
 

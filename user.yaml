@@ -3,14 +3,14 @@
   vars:
     username: jai
   tasks:
-    - name: Ensure group - {{username}}
+    - name: "Ensure group - {{ username }}"
       group:
-       name: {{username}}
+       name: "{{ username }}"
        state: present
  
-    - name: Add the user - {{username}}
+    - name: "Add the user - {{ username }}"
       user:
-       name: {{username}}
-       comment: {{username}}
-       group: {{username}}
+       name: "{{ username }}"
+       comment: "{{ username }}"
+       group: "{{ username }}"
        update_password: on_create

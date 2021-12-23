@@ -1,0 +1,6 @@
+---
+- hosts: ubuntu
+  tasks:
+    - name: "machine hostname - {{ ansible_hostname }}"
+      debug: 
+        msg: "host ip - {{ ansible_eth0.ipv4.address }}"

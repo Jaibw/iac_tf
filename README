@@ -29,4 +29,12 @@ Fact Variables
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/fact-vars.yaml
 ansible-playbook fact-vars.yaml
 
+==========================================================================
+Apache 
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/httpd.yaml
+sed 's/my-ip/<ip-address>/g' httpd.yaml > httpdfinal.yaml
+ansible-playbook httpdfinal.yaml
+
+curl http://<ip-address>:81/
 

@@ -1,9 +1,10 @@
 ---
 - hosts: 172.31.10.150
+  become: true
   tasks:
     - name: NTP OS Package Installation
-      package: name=ntp state=present
+      apt: name=ntp update_cache=yes state=present
     - name: NTP File Configurations
-      file: path=/etc/ntp.conf state=file
+      copy: src=ntp.conf dest=/etc/ntp.conf
     - name: To start NTP services
-      service: name=ntpd state=started enabled=yes
+      service: name=ntp state=started enabled=yes

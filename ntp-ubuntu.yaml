@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.10.150
+- hosts: myip
   become: true
   tasks:
     - name: NTP OS Package Installation

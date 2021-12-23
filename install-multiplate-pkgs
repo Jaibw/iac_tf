@@ -1,0 +1,17 @@
+- name: Package installtion with loop
+  hosts: your-machine-ip
+  become: yes
+  tasks:
+   - name: Install all the packages
+     yum:
+       name: '{{ item }}'
+       state: present
+       update_cache: True
+     with_items:
+       - httpd
+       - php
+       - gcc
+       - talk
+       - vim
+     when:
+      - ansible_facts['distribution'] == "Amazon"

@@ -1,0 +1,24 @@
+- name: Package installtion with loop
+  hosts: your-machine-ip
+  become: yes
+  tasks:
+    - name: Run with items greater than 5
+      command: echo {{ item }}
+      loop: [ 0, 2, 4, 6, 8, 10 ]
+      when: item > 5
+    - name: Reboot a slow machine that might have lots of updates to apply
+      reboot:
+        reboot_timeout: 60
+      retries: 5
+    - name: second task for package
+      package:
+        name: telnet
+        state: absent
+    - name: second task for package
+      package:
+        name: telnet
+        state: absent
+      retries: 2
+
+
+

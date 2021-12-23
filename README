@@ -68,3 +68,10 @@ wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/users-many.yaml
 nano users-many.yaml # 1.) update my-machine-ip  2. add more users in the loop 
 ansible-playbook users-many.yaml
 
+==========================================================================
+Install multiple pks with items 
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/install-multiplate-pkgs.yaml
+nano install-multiplate-pkgs.yaml # 1.) update your-machine-ip   
+ansible-playbook install-multiplate-pkgs.yaml
+

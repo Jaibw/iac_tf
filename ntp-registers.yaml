@@ -1,0 +1,27 @@
+---
+- hosts: 172.31.13.40
+  become: true
+  tasks:
+    - name: NTP OS Package Installation
+      package: name=ntp state=present
+      register: ntp_out
+      ignore_erros: true 
+    - name: debug 
+      debug: 
+        var: ntp_output 
+    - name: NTP File Configurations
+      file: path=/etc/ntp.conf state=file
+      notify:
+        - restart ntp 
+      when: ntp_output.rc == 0
+    - name: To start NTP services
+      service: name=ntpd state=started enabled=yes
+    - name: get ntp information 
+      shell: cat /etc/ntp.conf
+      register: ntp_config
+    - name: debug 
+      debug: 
+        var: ntp_config
+  handlers:
+    - name: restart ntp
+      service: name=ntpd state=restarted

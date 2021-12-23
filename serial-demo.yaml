@@ -1,0 +1,14 @@
+- name: Run two tasks
+  hosts: all
+  serial: 2
+  become: yes
+  tasks:
+    - name: First Task 
+      command: echo {{ item }}
+      loop: [ 0, 2, 4, 6, 8, 10 ]
+      when: item > 5
+    - name: Second Task
+      package:
+        name: telnet
+        state: absent
+      retries: 2

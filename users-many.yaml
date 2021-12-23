@@ -1,0 +1,19 @@
+---
+- hosts: my-machine-ip
+  become: yes
+  tasks:
+    - name: "Ensure group"
+      group:
+       name: devops
+       state: present
+ 
+    - name: "Add the users "
+      user:
+       name: "{{ item }}"
+       comment: "{{ item }}"
+       group: devops
+       update_password: on_create
+      loop:
+        - user01
+        - user02
+        - user03

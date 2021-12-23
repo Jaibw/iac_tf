@@ -14,10 +14,6 @@
       package:
         name: telnet
         state: absent
-    - name: second task for package
-      package:
-        name: telnet
-        state: absent
       retries: 2
 
 

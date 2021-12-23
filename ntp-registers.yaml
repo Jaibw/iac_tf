@@ -4,7 +4,7 @@
   tasks:
     - name: NTP OS Package Installation
       package: name=ntp state=present
-      register: ntp_out
+      register: ntp_output
       ignore_errors: true 
     - name: debug 
       debug: 

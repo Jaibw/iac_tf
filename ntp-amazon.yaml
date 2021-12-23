@@ -12,4 +12,4 @@
       service: name=ntpd state=started enabled=yes
   handlers:
     - name: restart ntp
-      service: name: ntpd state=restarted
+      service: name=ntpd state=restarted

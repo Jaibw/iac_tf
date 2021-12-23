@@ -1,6 +1,7 @@
 ---
 - name: Debug Playbook
   hosts: all
+  become: true
   tasks:
     - name: Talk package installation
       yum: name=telnet state=present

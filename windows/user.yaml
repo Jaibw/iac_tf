@@ -6,7 +6,7 @@
     - name: "Add the my user"
       win_user:
        name: "{{ username }}"
-       password: password
+       password: aE87dRhcERj=!$2a
        state: present
        groups:
          - Users

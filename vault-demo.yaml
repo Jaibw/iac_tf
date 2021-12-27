@@ -1,0 +1,9 @@
+---
+- name: Vault Demo
+  hosts: ubuntu
+  tasks:
+    - debug:
+        msg: First task to Print debug message
+
+    - debug:
+        msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"

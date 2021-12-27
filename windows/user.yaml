@@ -1,0 +1,12 @@
+---
+- hosts: win
+  vars:
+    username: user
+  tasks:
+    - name: "Add the my user"
+      win_user:
+       name: "{{ username }}"
+       password: password
+       state: present
+       groups:
+         - Users

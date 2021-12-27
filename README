@@ -115,10 +115,10 @@ ansible-playbook vault-demo.yaml --ask-vault-pass
 Ansible Roles  
 ==========================================================================
 cd ~
-ansible-galaxy init user20-role
-cd user20-role/tasks/
+ansible-galaxy init <name>-role
+cd <name>-role/tasks/
 rm main.yml
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/role/main.yaml
-nano main.yaml ## change user with user20 
+nano main.yaml ## change user with your username 
 cd ~
-ansible ubuntu -m include_role -a name=user20-role --become
+ansible ubuntu -m include_role -a name=<name>-role --become

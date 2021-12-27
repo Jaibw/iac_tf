@@ -122,3 +122,12 @@ wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/role/main.yaml
 nano main.yaml ## change user with your username 
 cd ~
 ansible ubuntu -m include_role -a name=<name>-role --become
+
+==========================================================================
+Windows Nodes   
+==========================================================================
+mkdir ~/win
+cd ~/win
+# wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/windows/install_pkgs.yaml
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/windows/user.yaml
+ansible-playbook user.yaml 

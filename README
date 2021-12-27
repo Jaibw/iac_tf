@@ -97,5 +97,17 @@ wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/serial-demo.yaml
 ansible-playbook serial-demo.yaml
 
 
-
+==========================================================================
+Secure your playbooks  
+==========================================================================
+wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/vault-demo.yaml
+ansible-vault encrypt vault-demo.yaml
+cat vault-demo.yaml
+ansible-vault decrypt vault-demo.yaml
+cat vault-demo.yaml
+ansible-vault encrypt vault-demo.yaml
+cat vault-demo.yaml
+ansible-vault view vault-demo.yaml
+ansible-vault edit vault-demo.yaml
+ansible-playbook vault-demo.yaml --ask-vault-pass
 

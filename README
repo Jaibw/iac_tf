@@ -130,5 +130,5 @@ mkdir ~/win
 cd ~/win
 # wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/windows/install_pkgs.yaml
 wget https://raw.githubusercontent.com/Jaibw/iac_tf/main/windows/user.yaml
-sed 's/user/<your-user-name>/g' user.yaml > userfinal.yaml
+sed 's/myusername/<your-user-name>/g' user.yaml > userfinal.yaml
 ansible-playbook userfinal.yaml 

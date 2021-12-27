@@ -1,0 +1,10 @@
+---
+- hosts: win
+  tasks:
+    - name: "install pkg"
+      win_chocolatey:
+        name: '{{ item }}'
+        state: present
+      loop:
+      - procexp
+      - windirstat

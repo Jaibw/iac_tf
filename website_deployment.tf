@@ -1,14 +1,12 @@
 provider "aws" {
-	access_key = ""
-    secret_key = ""
-	region     = ""
+	region     = "REGION-NAME"
 }
 
-resource "aws_instance" "website01-jai" {
-	ami = ""
-	instance_type = "t2.nano"
+resource "aws_instance" "website01" {
+	ami = "AMI-ID"
+	instance_type = "t2.micro"
 	associate_public_ip_address = "true"
-	key_name = "tf"
+	key_name = "AWS-KEY"
 	user_data = <<EOF
 #! /bin/bash
 sudo apt-get update
@@ -20,6 +18,6 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 	EOF
 	tags = {
-		Name = "Website01-JAI"
+		Name = "Website01"
 	}
 }
